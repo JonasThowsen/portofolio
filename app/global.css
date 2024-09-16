@@ -150,16 +150,38 @@ table {
 }
 
 .toggle-wrapper {
-  background: linear-gradient(to right, gray 50%, black 50%);
-  transition: background 300ms ease-in-out;
-}
-
-.toggle-wrapper:hover {
-  cursor: pointer;
+  background-color: #d1d5db; /* Light gray for the inactive state */
+  width: 64px; /* Nice width to give space */
+  height: 32px; /* Slightly taller for a refined feel */
+  border-radius: 9999px; /* Full pill shape */
+  position: relative;
+  transition: background-color 300ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px; /* Inner padding for the circle */
 }
 
 .toggle-wrapper[data-language='no'] {
-  background: linear-gradient(to right, black 50%, gray 50%);
+  background-color: #d1d5db; /* Darker gray when active (language = 'no') */
 }
+
+.toggle-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 300ms ease-in-out;
+  transform: translate(0, -50%);
+}
+
+.toggle-wrapper[data-language='no']::after {
+  transform: translate(28px, -50%); /* Move the circle to the right */
+}
+
 
 

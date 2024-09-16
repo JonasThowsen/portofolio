@@ -11,8 +11,8 @@ import { LanguageProvider } from './context/LanguageContext'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Jonas Ådland Thowsen Portfolio',
-    template: '%s | Jonas Ådland Thowsen',
+    default: 'Jonas Ådland Thowsen - CV',
+    template: '%s | Personal CV of Jonas Ådland Thowsen',
   },
   description: 'Personal portfolio and CV of Jonas Ådland Thowsen.',
   openGraph: {

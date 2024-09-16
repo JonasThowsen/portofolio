@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../translations'
 import { useEffect, useState } from 'react'
-import LanguageToggle from './LanguageToggle'
 
 const navItems = {
   '/': {
@@ -43,7 +42,6 @@ export function Navbar() {
                 </Link>
               ))}
             </div>
-            <LanguageToggle />
           </div>
         </nav>
       </div>

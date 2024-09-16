@@ -148,3 +148,11 @@ table {
 .title {
   text-wrap: balance;
 }
+
+.forst {
+  transition: all 300ms ease-in-out;
+}
+
+.sist {
+  transition: transform 300ms ease-in-out; 
+}

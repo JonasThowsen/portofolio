@@ -149,10 +149,17 @@ table {
   text-wrap: balance;
 }
 
-.forst {
-  transition: all 300ms ease-in-out;
+.toggle-wrapper {
+  background: linear-gradient(to right, gray 50%, black 50%);
+  transition: background 300ms ease-in-out;
 }
 
-.sist {
-  transition: transform 300ms ease-in-out; 
+.toggle-wrapper:hover {
+  cursor: pointer;
 }
+
+.toggle-wrapper[data-language='no'] {
+  background: linear-gradient(to right, black 50%, gray 50%);
+}
+
+

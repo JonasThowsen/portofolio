@@ -1,43 +1,29 @@
 'use client';
-import React, { useState, useEffect } from 'react';
 
-const LanguageToggle: React.FC = () => {
-  const [language, setLanguage] = useState<'en' | 'no'>('en');
-  const [isClient, setIsClient] = useState(false);
+import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
-  useEffect(() => {
-    setIsClient(true);
-    console.log('Component mounted, initial language:', language);
-  }, []);
-
-  useEffect(() => {
-    if (isClient) {
-      console.log('Language changed to:', language);
-    }
-  }, [language, isClient]);
+const LanguageToggle = () => {
+  const { language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'no' : 'en');
-    console.log('Toggle clicked');
+    setLanguage(language === 'en' ? 'no' : 'en');
   };
-
-  if (!isClient) {
-    return null; // or a loading placeholder
-  }
 
   return (
     <div className="flex items-center">
       <span className={`mr-2 ${language === 'en' ? 'font-bold' : ''}`}>EN</span>
-      <div
-        className="w-14 h-7 flex items-center bg-gray-300 rounded-full p-1 duration-300 ease-in-out cursor-pointer"
+      <button
+        className="w-14 h-7 flex items-center bg-gray-300 rounded-full p-1 duration-300 ease-in-out"
         onClick={toggleLanguage}
+        aria-label={`Switch to ${language === 'en' ? 'Norwegian' : 'English'}`}
       >
         <div
           className={`bg-white w-5 h-5 rounded-full shadow-md transform duration-300 ease-in-out ${
             language === 'no' ? 'translate-x-7' : ''
           }`}
         />
-      </div>
+      </button>
       <span className={`ml-2 ${language === 'no' ? 'font-bold' : ''}`}>NO</span>
     </div>
   );

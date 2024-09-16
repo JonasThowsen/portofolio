@@ -25,7 +25,7 @@ export const translations = {
       'TypeScript',
       'React',
       'Next.js',
-      'Data Analysis',
+      'Analysis',
       'Systematic',
       'Teamwork'
     ],
@@ -63,7 +63,7 @@ export const translations = {
       'TypeScript',
       'React',
       'Next.js',
-      'Dataanalyse',
+      'Analyse',
       'Systematisk',
       'Samarbeid'
     ],

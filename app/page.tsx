@@ -10,26 +10,26 @@ export default function Home() {
   const t = translations[language];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
-      <div className="absolute top-4 right-4 z-10">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex justify-center items-center relative p-4">
+      <div className="fixed top-4 right-4 z-10">
         <LanguageToggle />
       </div>
       
-      <main className="bg-white shadow-xl rounded-lg overflow-hidden">
-        <header className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-8 flex flex-col sm:flex-row items-center sm:items-start">
-          <div className="w-40 h-40 sm:w-48 sm:h-48 mb-4 sm:mb-0 sm:mr-8 overflow-hidden rounded-full border-4 border-white shadow-lg flex-shrink-0">
+      <main className="w-full max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
+        <header className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 sm:p-8 flex flex-col sm:flex-row items-center sm:items-start">
+          <div className="w-48 h-48 sm:w-56 sm:h-56 mb-4 sm:mb-0 sm:mr-8 rounded-full border-4 border-white shadow-lg flex-shrink-0 overflow-hidden">
             <Image 
               src="/jonas-profile.jpg" 
               alt={t.fullName} 
-              width={192} 
-              height={192} 
-              className="object-cover"
+              width={224} 
+              height={224} 
+              className="w-full h-full object-cover"
             />
           </div>
-          <div className="text-center sm:text-left">
-            <h1 className="text-3xl sm:text-4xl font-bold whitespace-nowrap">{t.fullName}</h1>
-            <p className="text-xl sm:text-2xl mt-2 opacity-90">{t.age}</p>
-            <p className="text-xl sm:text-2xl mt-2 opacity-90">{t.title}</p>
+          <div className="text-center sm:text-left flex flex-col justify-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">{t.fullName}</h1>
+            <p className="text-lg sm:text-xl md:text-2xl mt-2 opacity-90">{t.age}</p>
+            <p className="text-lg sm:text-xl md:text-2xl mt-1 opacity-90">{t.title}</p>
           </div>
         </header>
 

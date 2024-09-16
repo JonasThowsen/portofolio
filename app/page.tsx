@@ -87,7 +87,7 @@ export default function Home() {
             </section>
             <section>
               <h2 className="text-2xl font-semibold mb-3 text-gray-800 border-b border-gray-200 pb-2">{t.currentProject}</h2>
-              <p className="text-gray-600">{t.currentProjectDescription}  <a href="https://sirkusagio-nextjs.vercel.app" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Project Link</a></p>
+              <p className="text-gray-600">{t.currentProjectDescription} <a href="https://sirkusagio-nextjs.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Project Link</a></p>
             </section>
           </div>
         </div>

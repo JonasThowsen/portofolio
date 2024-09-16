@@ -1,17 +1,24 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../context/LanguageContext';
 
 const LanguageToggle: React.FC = () => {
-  const { language, toggleLanguage } = useLanguage();
+  const [language, setLanguage] = useState<'en' | 'no'>('en');
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+    console.log('Component mounted, initial language:', language);
   }, []);
 
-  const handleToggle = () => {
-    toggleLanguage();
+  useEffect(() => {
+    if (isClient) {
+      console.log('Language changed to:', language);
+    }
+  }, [language, isClient]);
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'en' ? 'no' : 'en');
+    console.log('Toggle clicked');
   };
 
   if (!isClient) {
@@ -23,7 +30,7 @@ const LanguageToggle: React.FC = () => {
       <span className={`mr-2 ${language === 'en' ? 'font-bold' : ''}`}>EN</span>
       <div
         className="w-14 h-7 flex items-center bg-gray-300 rounded-full p-1 duration-300 ease-in-out cursor-pointer"
-        onClick={handleToggle}
+        onClick={toggleLanguage}
       >
         <div
           className={`bg-white w-5 h-5 rounded-full shadow-md transform duration-300 ease-in-out ${

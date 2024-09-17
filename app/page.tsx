@@ -68,7 +68,7 @@ export default function Home() {
                     href="https://www.linkedin.com/in/jonas-%C3%A5dland-thowsen-006037305/"
                   >
                     <ArrowIcon />
-                    <p className="ml-2 h-7">LinkedIn</p>
+                    <p className="ml-2 h-7 linkedin">LinkedIn</p>
                   </a>
                 </li>
                 <li>
@@ -79,7 +79,7 @@ export default function Home() {
                     href="https://github.com/JonasThowsen"
                   >
                     <ArrowIcon />
-                    <p className="ml-2 h-7">GitHub</p>
+                    <p className="ml-2 h-7 github">GitHub</p>
                   </a>
                 </li>
               </ul>

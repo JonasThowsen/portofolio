@@ -5,7 +5,7 @@ export const translations = {
     age: 'Age: 20',
     contact: 'Contact',
     email: 'jonas.aa.thowsen@gmail.com',
-    phone: 'Phone: 95556474',
+    phone: 'Phone: +47 95556474',
     address: 'Mosvangen 7, 4021, Stavanger',
     education: 'Education',
     universityName: 'University of Stavanger',
@@ -73,6 +73,6 @@ export const translations = {
       'Engelsk (Flytende)'
     ],
     currentProject: 'Nåværende Prosjekt',
-    currentProjectDescription: 'På siden av studiene utvikler jeg en nettside for en bedrift, ved bruk av Next.js og Vercel. Det er et pågående prosjekt, ta en titt:',
+    currentProjectDescription: 'Ved siden av studiene utvikler jeg en nettside for en bedrift, ved bruk av Next.js og Vercel. Det er et pågående prosjekt, ta en titt:',
   }
 };

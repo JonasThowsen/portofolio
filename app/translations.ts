@@ -43,7 +43,7 @@ export const translations = {
     age: 'Alder: 20',
     contact: 'Kontakt',
     email: 'jonas.aa.thowsen@gmail.com',
-    phone: 'Tlf: 95556474',
+    phone: 'Tlf: +47 95556474',
     address: 'Mosvangen 7, 4021, Stavanger',
     education: 'Utdanning',
     universityName: 'Universitetet i Stavanger',

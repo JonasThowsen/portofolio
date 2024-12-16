@@ -53,7 +53,7 @@ export const translations = {
     experience: "Erfaring",
     jobTitle: "Driftsmedarbeider",
     jobCompany: "Power Forus",
-    jobPeriod: "Aug 2023 - nå",
+    jobPeriod: "Aug 2023 - Dec 2024",
     skills: "Ferdigheter",
     skillsList: [
       "Python",
@@ -72,4 +72,3 @@ export const translations = {
       "Ved siden av studiene utvikler jeg en nettside for en bedrift, ved bruk av Next.js og Vercel. Det er et pågående prosjekt, ta en titt:",
   },
 };
-
